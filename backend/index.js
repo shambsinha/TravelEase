@@ -1,10 +1,13 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import databaseConnection from './config/database'
+dotenv.config({ path: '.env'})
 
+databaseConnection();
 const app = express()
 app.use(express.urlencoded({ extended : true }))
 app.use(express.json())
 
-app.listen(3000, ()=> {
-    console.log(`Server is running at port no 3000`);
+app.listen(process.env.PORT, ()=> {
+    console.log(`Server is running at port no ${process.env.PORT}`);
 })
