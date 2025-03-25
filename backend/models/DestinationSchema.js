@@ -5,7 +5,7 @@ const destinationSchema = new mongoose.Schema({
   description: { type: String, required: true },
   country: { type: String, required: true },
   images: [{ type: String }],
-  coordinates: { type: [Number], required: true }, // [lat, long]
+  coordinates: { type: [Number], required: true },
   packages: [{ type: mongoose.Schema.Types.ObjectId, ref: "Package" }],
   createdAt: { type: Date, default: Date.now },
 });

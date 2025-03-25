@@ -4,10 +4,10 @@ const packageSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   price: { type: Number, required: true },
-  duration: { type: String, required: true }, // e.g., "5 Days, 4 Nights"
+  duration: { type: String, required: true }, 
   location: { type: String, required: true },
-  coordinates: { type: [Number], required: true }, // [lat, long]
-  images: [{ type: String }], // Array of image URLs
+  coordinates: { type: [Number], required: true },
+  images: [{ type: String }],
   reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "Review" }],
   createdAt: { type: Date, default: Date.now },
 });
