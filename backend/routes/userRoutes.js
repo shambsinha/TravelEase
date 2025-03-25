@@ -1,5 +1,5 @@
 import express from "express";
-// import { requireAuth } from "@clerk/clerk-sdk-node";
+import { requireAuth } from "@clerk/clerk-sdk-node";
 import User from "../models/User.js";
 
 const router = express.Router();
