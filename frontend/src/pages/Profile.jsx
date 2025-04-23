@@ -15,7 +15,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div className="max-w-lg mt-20 p-6 bg-white shadow-lg rounded-lg">
       <h2 className="text-2xl font-semibold mb-4">Profile</h2>
       <div className="flex items-center space-x-4">
         <img 
