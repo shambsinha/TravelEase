@@ -31,6 +31,7 @@ const Navbar = () => {
           <Link to="/destinations" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>DESTINATIONS</Link>
           <Link to="/packages" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>PACKAGES</Link>
           <Link to="/contact" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>CONTACT US</Link>
+          <Link to="/profile" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>Profile</Link>
 
           <SignedIn>
             <UserButton afterSignOutUrl="/" />

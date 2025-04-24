@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Destinations from "./pages/Destinations";
 import Packages from "./pages/Packages";
 import Contact from "./pages/Contact";
-import Profile from "./pages/profile";
+import Profile from "./pages/Profile";
 import PackageDetails from "./pages/PackageDetails";
 
 

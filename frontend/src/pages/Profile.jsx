@@ -1,37 +1,55 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
+import { useAuth } from "@clerk/clerk-react";
 
 const Profile = () => {
-  const [user, setUser] = useState(null);
-  
-  useEffect(() => {
-    axios.get("/api/user/profile")
-      .then(response => setUser(response.data))
-      .catch(error => console.error("Error fetching user data:", error));
-  }, []);
+  const [profile, setProfile] = useState(null);
+  const { getToken } = useAuth();
 
-  if (!user) {
-    return <p>Loading profile...</p>;
-  }
+  useEffect(() => {
+    const fetchProfile = async () => {
+      const token = await getToken();
+      const response = await fetch("http://localhost:3000/api/user/profile", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setProfile(data);
+      } else {
+        console.error("Failed to fetch profile", response.status);
+      }
+    };
+
+    fetchProfile();
+  }, [getToken]);
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div>
+      <h2>Profile</h2>
+      {profile ? (
+     <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg">
       <h2 className="text-2xl font-semibold mb-4">Profile</h2>
       <div className="flex items-center space-x-4">
-        <img 
-          src={user.avatar || "https://via.placeholder.com/150"} 
-          alt="Profile" 
-          className="w-20 h-20 rounded-full border" 
+        <img
+          src={profile.avatar}
+          alt="Profile"
+          className="w-20 h-20 rounded-full border"
         />
         <div>
-          <p className="text-lg font-medium">{user.name}</p>
-          <p className="text-gray-600">{user.email}</p>
+          <p className="text-lg font-medium">{profile.name}</p>
+          <p className="text-gray-600">{profile.email}</p>
         </div>
       </div>
       <div className="mt-4">
-        <p><strong>Phone:</strong> {user.phone || "N/A"}</p>
-        <p><strong>Address:</strong> {user.address || "N/A"}</p>
+        <p><strong>Phone:</strong> {profile.phone || "N/A"}</p>
+        <p><strong>Address:</strong> {profile.address || "N/A"}</p>
       </div>
+    </div>
+      ) : (
+        <p>Loading profile...</p>
+      )}
     </div>
   );
 };

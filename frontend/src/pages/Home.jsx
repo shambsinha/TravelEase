@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +13,9 @@ import paris from "/public/assets/images/parisgateway.jpg";
 import rome from "/public/assets/images/tajmahal.jpg";
 import newYork from "/public/assets/images/tajmahal.jpg";
 import sydney from "/public/assets/images/tajmahal.jpg";
+import axios from "axios";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const allPackages = [
   { id: 1, name: "Taj Mahal Splendor", image: tajMahal, location: "India" },
   { id: 2, name: "Paris Gateway", image: paris, location: "France" },
@@ -25,6 +27,11 @@ const allPackages = [
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  useEffect(()=>{
+    axios.get(`${backendUrl}/api`).then((response)=>{
+      console.log('this is main page');
+    })
+  })
 
   const filteredPackages = allPackages.filter((pkg) =>
     pkg.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
