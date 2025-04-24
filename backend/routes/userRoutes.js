@@ -1,15 +1,16 @@
-import express from "express";
-import { requireAuth } from "@clerk/clerk-sdk-node";
-import User from "../models/User.js";
+import express from 'express';
+import Clerk from '@clerk/clerk-sdk-node';
+import User from '../models/User.js';
 
 const router = express.Router();
 
-router.get("/profile", requireAuth, async (req, res) => {
+// GET user profile
+router.get('/profile', async (req, res) => {
   try {
-    console.log('showing user data',req.auth);
     const clerkId = req.auth.userId;
-    const email = req.auth.sessionClaims.email;
-    const name = req.auth.sessionClaims.name;
+    const clerkUser = await Clerk.users.getUser(clerkId);
+    const email = clerkUser.emailAddresses[0]?.emailAddress || "";
+    const name = `${clerkUser.firstName || ""} ${clerkUser.lastName || ""}`.trim();
 
     let user = await User.findOne({ clerkId });
 
@@ -20,29 +21,31 @@ router.get("/profile", requireAuth, async (req, res) => {
     }
     res.json(user);
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching profile:", error);
     res.status(500).json({ message: "Server error" });
   }
 });
 
-router.put("/profile", requireAuth, async (req, res) => {
-  try {
-    const clerkId = req.auth.userId;
+// PUT user profile (update info)
+// router.put('/profile', async (req, res) => {
+//   try {
+//     const clerkId = req.auth.userId;
 
-    const user = await User.findOneAndUpdate(
-      { clerkId },
-      { $set: req.body },
-      { new: true }
-    );
+//     const user = await User.findOneAndUpdate(
+//       { clerkId },
+//       { $set: req.body },
+//       { new: true }
+//     );
 
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    }
+//     if (!user) {
+//       return res.status(404).json({ message: 'User not found' });
+//     }
 
-    res.json(user);
-  } catch (error) {
-    res.status(500).json({ message: "Server error" });
-  }
-});
+//     res.json(user);
+//   } catch (error) {
+//     console.error('Error updating profile:', error);
+//     res.status(500).json({ message: 'Server error' });
+//   }
+// });
 
 export default router;
