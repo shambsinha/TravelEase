@@ -3,36 +3,42 @@
     "id": 1,
     "name": "Taj Mahal Splendor",
     "image": "/assets/images/tajmahal.jpg",
-    "location": "India"
+    "location": "India",
+    "price": "₹1499"
   },
   {
     "id": 2,
     "name": "Paris Gateway",
     "image": "/assets/images/parisgateway.jpg",
-    "location": "France"
+    "location": "France",
+    "price": "₹2499"
   },
   {
     "id": 3,
     "name": "Tokyo Adventure",
     "image": "/assets/images/tokyo.jpg",
-    "location": "Japan"
+    "location": "Japan",
+    "price": "₹2799"
   },
   {
     "id": 4,
     "name": "Rome Highlights",
     "image": "/assets/images/rome.jpg",
-    "location": "Italy"
+    "location": "Italy",
+    "price": "₹2199"
   },
   {
     "id": 5,
     "name": "New York City Vibes",
     "image": "/assets/images/tokyo.jpg",
-    "location": "USA"
+    "location": "USA",
+    "price": "₹2999"
   },
   {
     "id": 6,
     "name": "Sydney Escapade",
     "image": "/assets/images/tokyo.jpg",
-    "location": "Australia"
+    "location": "Australia",
+    "price": "₹2399"
   }
 ]
