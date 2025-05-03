@@ -28,7 +28,7 @@ const Navbar = () => {
         <nav className={`${isOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row w-full md:w-auto mt-4 md:mt-0 space-y-4 md:space-y-0 md:space-x-6`}>
           <Link to="/" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>HOME</Link>
           <Link to="/about" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>ABOUT</Link>
-          <Link to="/destinations" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>DESTINATIONS</Link>
+          <Link to="/bookings" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>BOOKINGS</Link>
           <Link to="/packages" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>PACKAGES</Link>
           <Link to="/contact" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>CONTACT US</Link>
           <Link to="/profile" className="text-white hover:text-yellow-400" onClick={() => setIsOpen(false)}>Profile</Link>

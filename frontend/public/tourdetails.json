@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "days": [
+      { "activity": "Arrival in Agra and visit to Mehtab Bagh for sunset view of Taj Mahal" },
+      { "activity": "Early morning visit to Taj Mahal and guided tour of Agra Fort" },
+      { "activity": "Day trip to Fatehpur Sikri and local bazaar exploration" },
+      { "activity": "Cultural show and Mughlai dinner at a heritage venue" },
+      { "activity": "Visit Itmad-ud-Daulah and boat ride on Yamuna River" },
+      { "activity": "Free morning and departure from Agra" }
+    ]
+  },
+  {
+    "id": 2,
+    "days": [
+      { "activity": "Arrival in Paris and evening Eiffel Tower visit" },
+      { "activity": "Louvre Museum and Notre-Dame Cathedral tour" },
+      { "activity": "Cruise on River Seine and Champs-Élysées walk" },
+      { "activity": "Versailles Palace day trip" },
+      { "activity": "Montmartre exploration and Sacré-Cœur visit" },
+      { "activity": "Leisure shopping at Galeries Lafayette and departure" }
+    ]
+  },
+  {
+    "id": 3,
+    "days": [
+      { "activity": "Arrival in Tokyo and welcome dinner" },
+      { "activity": "Asakusa Temple, Skytree, and river cruise" },
+      { "activity": "Full day at Disneyland Tokyo" },
+      { "activity": "Shibuya, Harajuku, and Meiji Shrine" },
+      { "activity": "Day trip to Mount Fuji and Lake Ashi" },
+      { "activity": "Tsukiji market visit and farewell sushi brunch" }
+    ]
+  },
+  {
+    "id": 4,
+    "days": [
+      { "activity": "Arrival in Rome and evening gelato walk" },
+      { "activity": "Colosseum, Roman Forum, and Palatine Hill tour" },
+      { "activity": "Vatican Museums and St. Peter’s Basilica visit" },
+      { "activity": "Day trip to Tivoli and Villa d'Este" },
+      { "activity": "Pantheon, Trevi Fountain, and Spanish Steps" },
+      { "activity": "Free morning and departure" }
+    ]
+  },
+  {
+    "id": 5,
+    "days": [
+      { "activity": "Arrival in NYC and Times Square exploration" },
+      { "activity": "Statue of Liberty and Ellis Island" },
+      { "activity": "Central Park, 5th Avenue shopping, and MoMA" },
+      { "activity": "Brooklyn Bridge walk and Dumbo neighborhood" },
+      { "activity": "Broadway show and Empire State Building" },
+      { "activity": "Brunch and departure" }
+    ]
+  },
+  {
+    "id": 6,
+    "days": [
+      { "activity": "Arrival in Sydney and evening harbour walk" },
+      { "activity": "Sydney Opera House and Circular Quay" },
+      { "activity": "Day at Bondi Beach and coastal walk to Coogee" },
+      { "activity": "Blue Mountains day trip" },
+      { "activity": "Taronga Zoo and ferry ride back to city" },
+      { "activity": "Free morning and departure" }
+    ]
+  }
+]

@@ -4,11 +4,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Destinations from "./pages/Destinations";
 import Packages from "./pages/Packages";
 import Contact from "./pages/Contact";
 import Profile from "./pages/Profile";
 import PackageDetails from "./pages/PackageDetails";
+import BOOKINGS from "./pages/Booking";
 
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/destinations" element={<Destinations />} />
+        <Route path="/bookings" element={<BOOKINGS />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/packages/:id" element={<PackageDetails />} />
         <Route path="/contact" element={<Contact />} />
