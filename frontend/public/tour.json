@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Taj Mahal Splendor",
+    "image": "/assets/images/tajmahal.jpg",
+    "location": "India"
+  },
+  {
+    "id": 2,
+    "name": "Paris Gateway",
+    "image": "/assets/images/parisgateway.jpg",
+    "location": "France"
+  },
+  {
+    "id": 3,
+    "name": "Tokyo Adventure",
+    "image": "/assets/images/tokyo.jpg",
+    "location": "Japan"
+  },
+  {
+    "id": 4,
+    "name": "Rome Highlights",
+    "image": "/assets/images/rome.jpg",
+    "location": "Italy"
+  },
+  {
+    "id": 5,
+    "name": "New York City Vibes",
+    "image": "/assets/images/tokyo.jpg",
+    "location": "USA"
+  },
+  {
+    "id": 6,
+    "name": "Sydney Escapade",
+    "image": "/assets/images/tokyo.jpg",
+    "location": "Australia"
+  }
+]
