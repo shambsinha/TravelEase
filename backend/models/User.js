@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
   address: { type: String, default: "", },
   role: { type: String, enum: ["customer", "admin"], default: "customer" },
   bookings: [{ type: mongoose.Schema.Types.ObjectId, ref: "Booking" }],
+  packageIds: [{ type: Number, required: true }],
   createdAt: { type: Date, default: Date.now },
 });
 
