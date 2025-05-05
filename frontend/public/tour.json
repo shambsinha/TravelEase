@@ -23,21 +23,21 @@
   {
     "id": 4,
     "name": "Rome Highlights",
-    "image": "/assets/images/rome.jpg",
+    "image": "/assets/rome.jpg",
     "location": "Italy",
     "price": "₹2199"
   },
   {
     "id": 5,
     "name": "New York City Vibes",
-    "image": "/assets/images/tokyo.jpg",
+    "image": "/assets/images/package_images/newyork.jpg",
     "location": "USA",
     "price": "₹2999"
   },
   {
     "id": 6,
     "name": "Sydney Escapade",
-    "image": "/assets/images/tokyo.jpg",
+    "image": "/assets/images/package_images/sydney.webp",
     "location": "Australia",
     "price": "₹2399"
   }
