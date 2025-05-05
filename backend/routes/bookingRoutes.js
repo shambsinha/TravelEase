@@ -6,7 +6,10 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    const bookings = await Booking.find({ user: req.auth.userId }).populate("package");
+    const clerkId = req.auth.userId;
+    const user = await User.findOne({ clerkId });
+    if(!user) return res.status(404).json({ message: "user not found"});
+    const bookings = await Booking.find({ user: user.id });
     res.json(bookings);
   } catch (error) {
     res.status(500).json({ message: "Server error" });
@@ -22,7 +25,7 @@ router.post("/", async (req, res) => {
     const existingUser = await User.findOne({ clerkId });
     const newBooking = new Booking({
       user: existingUser.id,
-      package: packageId,
+      packageId: packageId,
       guests,
       totalPrice,
       name,

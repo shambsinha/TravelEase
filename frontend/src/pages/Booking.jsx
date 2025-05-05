@@ -147,7 +147,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "@clerk/clerk-react";
 
 const Booking = () => {
-  const [packageIds, setPackageIds] = useState([]);
+  const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { getToken } = useAuth();
@@ -159,13 +159,14 @@ const Booking = () => {
     const fetchUserPackages = async () => {
       try {
         const token = await getToken();
-        const response = await axios.get("http://localhost:3000/api/packages", {
+        const response = await axios.get("http://localhost:3000/api/booking", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
 
-        setPackageIds(response.data.packageIds || []);
+        // setPackageIds(response.data.packageIds || []);
+        setBookings(response.data);
       } catch (err) {
         console.error(err);
         setError("Failed to fetch bookings.");
@@ -185,7 +186,7 @@ const Booking = () => {
 
       {error && <p className="text-red-500">{error}</p>}
 
-      {packageIds.length === 0 ? (
+      {bookings.length === 0 ? (
         <div className="text-center">
           <p className="text-xl text-gray-600">No bookings yet.</p>
           <Link to="/packages">
@@ -196,8 +197,8 @@ const Booking = () => {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {packageIds.map((id, index) => {
-            const matchedPackage = packages.find((pkg) => pkg.id === id); // match based on _id
+          {bookings.map((booking, index) => {
+            const matchedPackage = packages.find((pkg) => pkg.id === booking.packageId);
             return (
               <div
                 key={index}
@@ -214,6 +215,8 @@ const Booking = () => {
                       {matchedPackage.name}
                     </h3>
                     <p className="text-sm text-gray-500 mt-2">{matchedPackage.location}</p>
+                    <p className="text-sm text-gray-500 mt-2">Guests: {booking.guests}</p>
+                    <p>Total: ₹{booking.totalPrice}</p>
                   </>
                 ) : (
                   <p className="text-gray-600">Package details not found.</p>
