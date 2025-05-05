@@ -1,19 +1,52 @@
 import React, { useState } from "react";
+import { useAuth } from "@clerk/clerk-react";
 
 const BookingForm = ({ tour, onClose, onBook }) => {
-  const [numPeople, setNumPeople] = useState(""); // Track number of people
-  const [totalPrice, setTotalPrice] = useState(0); // Track total price
+  const { getToken } = useAuth();
+  const [numPeople, setNumPeople] = useState("");
+  const [name,setName] = useState("");
+  const [email,setEmail] = useState("");
+  const [totalPrice, setTotalPrice] = useState(0);
 
-  // Update total price whenever the number of people changes
   const handlePeopleChange = (e) => {
     const selectedPeople = parseInt(e.target.value);
     setNumPeople(selectedPeople);
     setTotalPrice(selectedPeople * parseInt(tour.price.replace('₹', ''))); // Calculate total
   };
+  const handleBooking = async () => {
+    try {
+      const token = await getToken();
+      const response = await fetch("http://localhost:3000/api/booking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          packageId : tour.id,
+          guests : numPeople,
+          totalPrice,
+          name,
+          email,
+        }),
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Booking successful:", data);
+        onBook();
+      } else {
+        const errorData = await response.json();
+        console.error("Booking failed:", errorData.message);
+      }
+    } catch (err) {
+      console.error("Error booking package:", err);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onBook();
+    handleBooking();
   };
 
   return (
@@ -27,15 +60,18 @@ const BookingForm = ({ tour, onClose, onBook }) => {
             type="text"
             placeholder="Your Name"
             className="w-full mb-3 p-2 border rounded"
+            value={name}
+            onChange={(e)=> setName(e.target.value)}
             required
           />
           <input
             type="email"
             placeholder="Your Email"
             className="w-full mb-3 p-2 border rounded"
+            value={email}
+            onChange={(e)=> setEmail(e.target.value)}
             required
           />          
-          {/* Select Number of People */}
           <select
             className="w-full mb-3 p-2 border rounded"
             value={numPeople}
@@ -54,8 +90,6 @@ const BookingForm = ({ tour, onClose, onBook }) => {
             <option value="9">9 People</option>
             <option value="10">10 People</option>
           </select>
-
-          {/* Bill Summary */}
           {numPeople && (
             <div className="mt-4 p-3 border bg-gray-100 rounded-md">
               <p className="text-lg font-semibold">Booking Summary</p>

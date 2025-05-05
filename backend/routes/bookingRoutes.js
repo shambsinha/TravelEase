@@ -1,10 +1,10 @@
 import express from "express";
 import Booking from "../models/Booking.js";
-// import { requireAuth } from "@clerk/clerk-sdk-node";
+import User from "../models/User.js";
 
 const router = express.Router();
 
-router.get("/", requireAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const bookings = await Booking.find({ user: req.auth.userId }).populate("package");
     res.json(bookings);
@@ -13,19 +13,26 @@ router.get("/", requireAuth, async (req, res) => {
   }
 });
 
-router.post("/", requireAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    const { packageId, guests, totalPrice } = req.body;
+    const { packageId, guests, totalPrice, name, email } = req.body;
+    console.log(req.body);
+    console.log(req.auth.userId);
+    const clerkId = req.auth.userId;
+    const existingUser = await User.findOne({ clerkId });
     const newBooking = new Booking({
-      user: req.auth.userId,
+      user: existingUser.id,
       package: packageId,
       guests,
       totalPrice,
+      name,
+      email,
     });
     await newBooking.save();
     res.status(201).json(newBooking);
   } catch (error) {
-    res.status(500).json({ message: "Server error" });
+    res.status(500).json({ message: "Server error hai" });
+    console.error(error);
   }
 });
 

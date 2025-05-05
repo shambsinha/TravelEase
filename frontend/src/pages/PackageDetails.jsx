@@ -168,8 +168,8 @@ const PackageDetails = () => {
           tour={tour}
           onClose={() => setIsBookingOpen(false)}
           onBook={() => {
-            setIsBooked(true);
             setIsBookingOpen(false);
+            setIsBooked(true);
           }}
         />
       )}
