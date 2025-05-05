@@ -77,6 +77,7 @@ const PackageDetails = () => {
   const { id } = useParams();
   const [tour, setTour] = useState(null);
   const [tourDetails, setTourDetails] = useState([]);
+  const [gallery,setGallery] = useState([]);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [isBooked, setIsBooked] = useState(false);
 
@@ -92,6 +93,7 @@ const PackageDetails = () => {
         const detailsData = await detailsRes.json();
         const detailsMatch = detailsData.find(pkg => pkg.id === parseInt(id));
         setTourDetails(detailsMatch?.days || []);
+        setGallery(detailsMatch?.gallery || []);
       } catch (error) {
         console.error("Error loading data:", error);
       }
@@ -113,7 +115,7 @@ const PackageDetails = () => {
           <img src={tour.image} alt={tour.name} className="w-full h-64 object-cover" />
           <div className="p-6 text-center">
             <h2 className="text-3xl font-bold text-blue-600">{tour.name}
-            <span className="text-yellow-600 ml-4 font-bold">{tour.price}</span>
+              <span className="text-yellow-600 ml-4 font-bold">{tour.price}</span>
             </h2>
             <p className="text-md text-gray-600 mt-2">{tour.location}</p>
 
@@ -146,6 +148,20 @@ const PackageDetails = () => {
             </>
           )}
         </div>
+        <div className="mt-12">
+          <h3 className="text-2xl font-semibold text-gray-800 text-center mb-6">OUR Gallery</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {gallery.map((img, index) => (
+              <img
+                key={index}
+                src={img.pic}
+                alt={`Gallery pic ${index + 1}`}
+                className="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+              />
+            ))}
+          </div>
+        </div>
+
 
         {/* Daily Activity Plan */}
         <h3 className="text-2xl font-semibold text-gray-800 text-center mt-12 mb-6">6-Day Tour Plan</h3>

@@ -8,6 +8,12 @@
       { "activity": "Cultural show and Mughlai dinner at a heritage venue" },
       { "activity": "Visit Itmad-ud-Daulah and boat ride on Yamuna River" },
       { "activity": "Free morning and departure from Agra" }
+    ],
+    "gallery": [
+      { "pic": "/assets/images/package_images/taj1.jpg" },
+      { "pic": "/assets/images/package_images/taj2.jpg" },
+      { "pic": "/assets/images/package_images/taj3.jpg" },
+      { "pic": "/assets/images/package_images/taj4.jpg" }
     ]
   },
   {
@@ -19,6 +25,12 @@
       { "activity": "Versailles Palace day trip" },
       { "activity": "Montmartre exploration and Sacré-Cœur visit" },
       { "activity": "Leisure shopping at Galeries Lafayette and departure" }
+    ],
+    "gallery": [
+      { "pic": "vening" },
+      { "pic": "https://www.shutterstock.com/search/eiffel-tower-evening" },
+      { "pic": "https://www.shutterstock.com/search/eiffel-tower-evening" },
+      { "pic": "https://www.shutterstock.com/search/eiffel-tower-evening" }
     ]
   },
   {
@@ -30,6 +42,12 @@
       { "activity": "Shibuya, Harajuku, and Meiji Shrine" },
       { "activity": "Day trip to Mount Fuji and Lake Ashi" },
       { "activity": "Tsukiji market visit and farewell sushi brunch" }
+    ],
+    "gallery": [
+      { "pic": "https://people.com/diane-kruger-shares-rare-family-snap-at-tokyo-disneyland-8621641" },
+      { "pic": "https://people.com/diane-kruger-shares-rare-family-snap-at-tokyo-disneyland-8621641" },
+      { "pic": "https://people.com/diane-kruger-shares-rare-family-snap-at-tokyo-disneyland-8621641" },
+      { "pic": "https://people.com/diane-kruger-shares-rare-family-snap-at-tokyo-disneyland-8621641" }
     ]
   },
   {
@@ -41,6 +59,12 @@
       { "activity": "Day trip to Tivoli and Villa d'Este" },
       { "activity": "Pantheon, Trevi Fountain, and Spanish Steps" },
       { "activity": "Free morning and departure" }
+    ],
+    "gallery": [
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" }
     ]
   },
   {
@@ -52,6 +76,12 @@
       { "activity": "Brooklyn Bridge walk and Dumbo neighborhood" },
       { "activity": "Broadway show and Empire State Building" },
       { "activity": "Brunch and departure" }
+    ],
+    "gallery": [
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" }
     ]
   },
   {
@@ -63,6 +93,12 @@
       { "activity": "Blue Mountains day trip" },
       { "activity": "Taronga Zoo and ferry ride back to city" },
       { "activity": "Free morning and departure" }
+    ],
+    "gallery": [
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
+      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" }
     ]
   }
 ]
