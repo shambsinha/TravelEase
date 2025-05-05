@@ -175,7 +175,7 @@ const Home = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-white rounded-lg shadow-lg overflow-hidden"
             >
-              <img src={pkg.image} alt={pkg.name} className="w-full h-56 object-cover" />
+              <img src={pkg.image} alt={pkg.name} className="w-full h-56 object-fill" />
               <div className="p-6 text-center">
                 <h3 className="text-xl font-semibold text-blue-600">{pkg.name}</h3>
                 <p className="text-sm text-gray-500">{pkg.location}</p>
