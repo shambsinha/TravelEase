@@ -27,10 +27,10 @@
       { "activity": "Leisure shopping at Galeries Lafayette and departure" }
     ],
     "gallery": [
-      { "pic": "vening" },
-      { "pic": "https://www.shutterstock.com/search/eiffel-tower-evening" },
-      { "pic": "https://www.shutterstock.com/search/eiffel-tower-evening" },
-      { "pic": "https://www.shutterstock.com/search/eiffel-tower-evening" }
+      { "pic": "/assets/images/package_images/paris1.avif" },
+      { "pic": "/assets/images/package_images/paris2.avif" },
+      { "pic": "/assets/images/package_images/paris3.avif" },
+      { "pic": "/assets/images/package_images/paris4.avif" }
     ]
   },
   {
@@ -44,10 +44,10 @@
       { "activity": "Tsukiji market visit and farewell sushi brunch" }
     ],
     "gallery": [
-      { "pic": "https://people.com/diane-kruger-shares-rare-family-snap-at-tokyo-disneyland-8621641" },
-      { "pic": "https://people.com/diane-kruger-shares-rare-family-snap-at-tokyo-disneyland-8621641" },
-      { "pic": "https://people.com/diane-kruger-shares-rare-family-snap-at-tokyo-disneyland-8621641" },
-      { "pic": "https://people.com/diane-kruger-shares-rare-family-snap-at-tokyo-disneyland-8621641" }
+      { "pic": "/assets/images/package_images/tokyo1.jpg" },
+      { "pic": "/assets/images/package_images/tokyo2.jpg" },
+      { "pic": "/assets/images/package_images/tokyo3.avif" },
+      { "pic": "/assets/images/package_images/tokyo4.webp" }
     ]
   },
   {
@@ -61,10 +61,10 @@
       { "activity": "Free morning and departure" }
     ],
     "gallery": [
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" }
+      { "pic": "/assets/images/package_images/tokyo1.jpg" },
+      { "pic": "/assets/images/package_images/tokyo2.jpg" },
+      { "pic": "/assets/images/package_images/tokyo3.avif" },
+      { "pic": "/assets/images/package_images/tokyo4.webp" }
     ]
   },
   {
@@ -78,10 +78,10 @@
       { "activity": "Brunch and departure" }
     ],
     "gallery": [
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" }
+      { "pic": "/assets/images/package_images/tokyo1.jpg" },
+      { "pic": "/assets/images/package_images/tokyo2.jpg" },
+      { "pic": "/assets/images/package_images/tokyo3.avif" },
+      { "pic": "/assets/images/package_images/tokyo4.webp" }
     ]
   },
   {
@@ -95,10 +95,10 @@
       { "activity": "Free morning and departure" }
     ],
     "gallery": [
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" },
-      { "pic": "https://www.gettyimages.com/photos/rome-colosseum" }
+      { "pic": "/assets/images/package_images/tokyo1.jpg" },
+      { "pic": "/assets/images/package_images/tokyo2.jpg" },
+      { "pic": "/assets/images/package_images/tokyo3.avif" },
+      { "pic": "/assets/images/package_images/tokyo4.webp" }
     ]
   }
 ]
