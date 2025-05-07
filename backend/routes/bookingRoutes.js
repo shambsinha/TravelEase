@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
     const clerkId = req.auth.userId;
     const existingUser = await User.findOne({ clerkId });
     const newBooking = new Booking({
-      user: existingUser.id,
+      user: existingUser._id,
       packageId: packageId,
       guests,
       totalPrice,
