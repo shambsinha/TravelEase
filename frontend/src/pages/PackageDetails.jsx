@@ -117,6 +117,7 @@ const PackageDetails = () => {
             <h2 className="text-3xl font-bold text-blue-600">{tour.name}
               <span className="text-yellow-600 ml-4 font-bold">{tour.price}</span>
             </h2>
+            <h3>(20-05-2025   -  26-05-2025)</h3>
             <p className="text-md text-gray-600 mt-2">{tour.location}</p>
 
           </div>
